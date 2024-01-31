@@ -23,6 +23,7 @@ class Lab2 {
         System.out.print("What's your name? ");
         String customerName = input.nextLine();
 
+//  Create variables to call on random utility and Decimal Format utility
         Random rand = new Random();
         DecimalFormat jackpotFMT = new DecimalFormat("$,###");
 
