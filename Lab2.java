@@ -42,8 +42,9 @@ class Lab2 {
                 }
             System.out.println();
             }
+        String[] names = customerName.strip().split(" ");
         System.out.println("-----------------");
-        System.out.println("Good luck "+ customerName.strip().split(" "));
+        System.out.println("Good luck "+ names[0]);
         System.out.println("-----------------");
         }
 
@@ -51,4 +52,5 @@ class Lab2 {
 
 
     }
+
 
