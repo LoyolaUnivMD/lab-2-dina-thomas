@@ -1,3 +1,23 @@
+import java.util.random
+import java.util.Scanner
+import java.text.decmialformat
+Random rand = newRandom()
+Scanner input = new Scanner(System.in)
+DecimalFormat fmt = new DecimalFormat("0#")
+DecimalFomrmat jackpotFmt = new DecimalFormat("$,###")
 print out description of the program
 ask for the player's name
-...
+output "Here are the ticket:"
+for int i = 0, i < 10, i++
+    a. for int i = 0, i < 6, i++
+        i. num = rand.nextInt(0,99)
+        ii. if num < 10
+            a. print fmt.format(num)
+        i. else
+            a. print num
+    b. println
+println "-----------------"
+println "Good luck " + name.split(" ")
+println "Estimated Jackpot:"
+println jackpotFmt.format(prize)
+println "-----------------"
