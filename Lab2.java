@@ -1,4 +1,13 @@
+//Programmers: Dina Quevedo + Thomas Richards
+//Course: CS212, Mr. John
+//Due Date: 1/31/23
+//Lab Assignment: 2
+//Problem Statement: Create lottery ticket generator
+//Data In: Users name
+//Data Out: 10 lottery tickets, good luck message, and possible jackpot
+//Credits: Lab Prompt
 
+// Import Random, Scanner, DecimalFormat
 import java.util.Random;
 import java.util.Scanner;
 import java.text.DecimalFormat;
