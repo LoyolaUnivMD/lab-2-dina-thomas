@@ -41,11 +41,16 @@ class Lab2 {
             //makes a new line
             System.out.println();
             }
+        //strips the name of any whitespace then splits the name by space in the middle
         String[] names = customerName.strip().split(" ");
+        //outputs a line
         System.out.println("-----------------");
+        //outputs a goodluck message then the first name
         System.out.println("Good luck "+ names[0]);
+        //outputs the estimated jackpot, and formats it so there is a $ in front and commas every 3 numbers
         System.out.println("Estimated Jackpot:");
         System.out.println(jackpotFMT.format(prize));
+        //outputs a line
         System.out.println("-----------------");
         }
 
