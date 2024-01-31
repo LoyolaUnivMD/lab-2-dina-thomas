@@ -8,8 +8,9 @@
 // Credits: [Is your code based on an example in the book, in class, or something else?
 //            Reminder: you should never take code from the Internet or another person
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 class Lab2 {
     public static void main(String[] args) {
@@ -20,9 +21,32 @@ class Lab2 {
         System.out.println("This program generates 10 lottery tickets.");
         
         System.out.print("What's your name? ");
-
-
         String customerName = input.nextLine();
+
+
+        Random rand = newRandom();
+        Scanner input = new Scanner(System.in);
+        DecimalFormat fmt = new DecimalFormat('0#');
+        DecimalFormat jackpotFMT = new DecimalFormat('$,###');
+
+        System.out.println("Here are the tickets: ");
+        for(int i = 0; i < 10; i++){
+            for(int y = 0; y < 6; y++){
+                num = rand.nextInt(0,99);
+                if(num < 10) {
+                    System.out.print(fmt.format(num));
+                }
+                else {
+                    System.out.print(num);
+                }
+
+                }
+            System.out.println();
+            }
+        System.out.println("-----------------");
+        System.out.println("Good luck "+ name.split(""));
+        }
+
 
 
 
