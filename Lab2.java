@@ -21,6 +21,7 @@ class Lab2 {
         System.out.print("What's your name? ");
 
         String customerName = input.nextLine();
+        System.out.println("Test");
 
 
     }
