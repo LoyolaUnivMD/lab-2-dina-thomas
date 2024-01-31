@@ -23,13 +23,12 @@ class Lab2 {
         System.out.print("What's your name? ");
         String customerName = input.nextLine();
 
-
-        Random rand = newRandom();
-        Scanner input = new Scanner(System.in);
-        DecimalFormat fmt = new DecimalFormat('0#');
-        DecimalFormat jackpotFMT = new DecimalFormat('$,###');
+        Random rand = new Random();
+        DecimalFormat fmt = new DecimalFormat("0#");
+        DecimalFormat jackpotFMT = new DecimalFormat("$,###");
 
         System.out.println("Here are the tickets: ");
+        int num = 0;
         for(int i = 0; i < 10; i++){
             for(int y = 0; y < 6; y++){
                 num = rand.nextInt(0,99);
@@ -44,11 +43,11 @@ class Lab2 {
             System.out.println();
             }
         System.out.println("-----------------");
-        System.out.println("Good luck "+ name.split(""));
+        System.out.println("Good luck "+ customerName.strip().split(" "));
         }
 
 
 
 
     }
-}
+
