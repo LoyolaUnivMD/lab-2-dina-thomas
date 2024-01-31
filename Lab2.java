@@ -24,7 +24,7 @@ class Lab2 {
         String customerName = input.nextLine();
 
         Random rand = new Random();
-        DecimalFormat fmt = new DecimalFormat("0#");
+        DecimalFormat fmt = new DecimalFormat("##");
         DecimalFormat jackpotFMT = new DecimalFormat("$,###");
 
         System.out.println("Here are the tickets: ");
@@ -33,10 +33,10 @@ class Lab2 {
             for(int y = 0; y < 6; y++){
                 num = rand.nextInt(0,99);
                 if(num < 10) {
-                    System.out.print(fmt.format(num));
+                    System.out.print(fmt.format(num) + " ");
                 }
                 else {
-                    System.out.print(num);
+                    System.out.print(num + " ");
                 }
 
                 }
@@ -44,6 +44,7 @@ class Lab2 {
             }
         System.out.println("-----------------");
         System.out.println("Good luck "+ customerName.strip().split(" "));
+        System.out.println("-----------------");
         }
 
 

@@ -1,6 +1,23 @@
-print out description of the program
-ask for the player's name
-output "Here are the ticket:"
-for int i = 0, i < 10, i++
-    a. for int i = 0, i < 6, i++
-        i.
+1.import java.util.random
+2.import java.util.Scanner
+3.import java.text.decimalformat
+4.print out description of the program
+5.ask for the player's name
+6.Random rand = newRandom()
+7.Scanner input = new Scanner(System.in)
+8.DecimalFormat fmt = new DecimalFormat("0#")
+9.DecimalFormat jackpotFmt = new DecimalFormat("$,###")
+10.output "Here are the ticket:"
+11.for int i = 0; i < 10; i++
+    a. for int y = 0; y < 6; y++
+        i. num = rand.nextInt(0,99)
+        ii. if num < 10
+            a. print fmt.format(num)
+        i. else
+            a. print num
+    b. println
+12.println "-----------------"
+13.println "Good luck " + name.split(" ")
+14.println "Estimated Jackpot:"
+15.println jackpotFmt.format(prize)
+16.println "-----------------"
