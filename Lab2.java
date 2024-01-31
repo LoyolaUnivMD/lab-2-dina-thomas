@@ -1,12 +1,3 @@
-// Programmers:  [your names here]
-// Course:  CS 212
-// Due Date:
-// Lab Assignment:
-// Problem Statement:
-// Data In:
-// Data Out:
-// Credits: [Is your code based on an example in the book, in class, or something else?
-//            Reminder: you should never take code from the Internet or another person
 
 import java.util.Random;
 import java.util.Scanner;
@@ -27,18 +18,27 @@ class Lab2 {
         DecimalFormat jackpotFMT = new DecimalFormat("$,###");
 
         System.out.println("Here are the tickets: ");
+        //makes a new int called num
         int num = 0;
+        //loops 10 times
         for(int i = 0; i < 10; i++){
+            //loops 6 times
             for(int y = 0; y < 6; y++){
+                //generates a random int between 0 and 99
                 num = rand.nextInt(0,99);
+                //if the random int is less than 10
                 if(num < 10) {
+                    //output a 0 then the random int then a space
                     System.out.print("0" + num + " ");
                 }
+                //otherwise output the random int then a space
                 else {
+
                     System.out.print(num + " ");
                 }
 
                 }
+            //makes a new line
             System.out.println();
             }
         String[] names = customerName.strip().split(" ");
