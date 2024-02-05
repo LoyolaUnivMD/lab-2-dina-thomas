@@ -14,7 +14,7 @@ import java.text.DecimalFormat;
 
 class Lab2 {
     public static void main(String[] args) {
-        long prize = 225938745L;
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("CS 212 - Lab 2");
@@ -23,9 +23,23 @@ class Lab2 {
         System.out.print("What's your name? ");
         String customerName = input.nextLine();
 
-//  Create variables to call on random utility and Decimal Format utility
+        //strips the name of any whitespace then splits the name by space in the middle
+        String[] names = customerName.strip().split(" ");
+
+        //  Create variables to call on random utility and Decimal Format utility
         Random rand = new Random();
         DecimalFormat jackpotFMT = new DecimalFormat("$,###");
+
+        DecimalFormat betFMT = new DecimalFormat("$,###.##");
+        System.out.print("How much do you want to play? ");
+        double prize = input.nextDouble();
+
+
+        System.out.println("Great! "+ names[0] + " wants to play "+ betFMT.format(prize));
+
+        int[] winningNums = { 3, 5, 16, 58, 59, 11};
+
+
 
         System.out.println("Here are the tickets: ");
         //makes a new int called num
@@ -36,6 +50,11 @@ class Lab2 {
             for(int y = 0; y < 6; y++){
                 //generates a random int between 0 and 99
                 num = rand.nextInt(0,99);
+                for (int j = 0; j < winningNums.length; j++){
+                    if (num == winningNums[j]){
+                        prize = Math.pow(prize,1.75);
+                    }
+                }
                 //if the random int is less than 10
                 if(num < 10) {
                     //output a 0 then the random int then a space
@@ -51,14 +70,13 @@ class Lab2 {
             //makes a new line
             System.out.println();
             }
-        //strips the name of any whitespace then splits the name by space in the middle
-        String[] names = customerName.strip().split(" ");
         //outputs a line
         System.out.println("-----------------");
-        //outputs a goodluck message then the first name
         System.out.println("Good luck "+ names[0]);
+        //outputs a line
+        System.out.println("-----------------");
         //outputs the estimated jackpot, and formats it so there is a $ in front and commas every 3 numbers
-        System.out.println("Estimated Jackpot:");
+        System.out.println("Your winnings are :");
         System.out.println(jackpotFMT.format(prize));
         //outputs a line
         System.out.println("-----------------");

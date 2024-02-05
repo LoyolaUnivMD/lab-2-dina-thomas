@@ -17,7 +17,7 @@
         i. else
             a. print num + " "
     b. println
-13. String names = customerName.strip().split(" ")
+13.String names = customerName.strip().split(" ")
 14.println "-----------------"
 15.println "Good luck " + name[0]
 16.println "Estimated Jackpot:"
