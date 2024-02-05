@@ -46,7 +46,7 @@ class Lab2 {
         //message to lt user know about to print the tickets
         System.out.println("Here are the tickets: ");
         //makes a new int called num
-        int num = 0;
+        int num;
         //loops 10 times
         for(int i = 0; i < 10; i++){
             //loops 6 times
@@ -54,10 +54,10 @@ class Lab2 {
                 //generates a random int between 0 and 99
                 num = rand.nextInt(0,99);
                 //loops through each winning number
-                for (int j = 0; j < winningNums.length; j++){
+                for (int winningNum : winningNums) {
                     //compares the random to the winning numbers, and if it is, multiplies the prize by a power of 1.75
-                    if (num == winningNums[j]){
-                        prize = Math.pow(prize,1.75);
+                    if (num == winningNum) {
+                        prize = Math.pow(prize, 1.75);
                     }
                 }
                 //if the random int is less than 10

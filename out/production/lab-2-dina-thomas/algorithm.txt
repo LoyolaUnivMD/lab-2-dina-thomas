@@ -1,14 +1,17 @@
 1.import java.util.Random
 2.import java.util.Scanner
 3.import java.text.decimalformat
-4.Set prize to 225938745L
-5.Scanner input = new Scanner(System.in)
-6.print out description of the program
-7.ask for the player's name
-8.Random rand = newRandom()
-9.DecimalFormat jackpotFmt = new DecimalFormat("$,###")
-10.output "Here are the ticket:"
-11. int num = 0
+4.Scanner input = new Scanner(System.in)
+5.Random rand = newRandom()
+6.DecimalFormat jackpotFmt = new DecimalFormat("$,###.##")
+7.print out description of the program
+8.ask for the player's name
+9.String names = customerName.strip().split(" ")
+10. ask how much they would like to bet
+11.output "Great! "+ names[0] + " wants to play "+ jackpotFMT.format(prize)
+12. make an int array called winning nums and set it to { 3, 5, 16, 58, 59, 11}
+11.output "Here are the ticket:"
+11.int num
 12.for int i = 0; i < 10; i++
     a. for int y = 0; y < 6; y++
         i. num = rand.nextInt(0,99)
@@ -17,7 +20,7 @@
         i. else
             a. print num + " "
     b. println
-13.String names = customerName.strip().split(" ")
+13.
 14.println "-----------------"
 15.println "Good luck " + name[0]
 16.println "Estimated Jackpot:"
